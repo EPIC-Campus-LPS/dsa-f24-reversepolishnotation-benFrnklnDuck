@@ -1,6 +1,13 @@
 import java.util.EmptyStackException;
 
 public class ReversePolishNotation {
+    /**
+     * Create a stack to hold numbers in the equation
+     * While loop: continues until input equation is empty
+     *
+     * @param input a postfix style equation in the form of the string to be evaluated
+     * @return the integer form of the answer after evaluation
+     */
     public static int evaluatePostfix (String input) {
         try {
             Stack stack = new Stack();
@@ -99,7 +106,7 @@ public class ReversePolishNotation {
                         input = input.substring(2);
                     }
                 } else {
-                    if (input.length() < 2) {
+                    if (input.indexOf(" ") == -1) {
                         output += input + " ";
                         input = "";
                     } else {
