@@ -60,7 +60,7 @@ public class ReversePolishNotation {
                 throw new IllegalArgumentException("Invalid postfix expression.");
             }
             return Integer.parseInt(stack.pop());
-        } catch (EmptyStackException|StringIndexOutOfBoundsException e) {
+        } catch (EmptyStackException|StringIndexOutOfBoundsException|NegativeArraySizeException e) {
             throw new IllegalArgumentException("Invalid postfix expression.");
         }
     }
